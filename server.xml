@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8005" shutdown="SHUTDOWN">
+    <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+
+    <Service name="Catalina">
+        <Connector
+            port="8080"
+            protocol="org.apache.coyote.http11.Http11NioProtocol"
+            connectionTimeout="1800000"
+            keepAliveTimeout="1800000"
+            maxKeepAliveRequests="-1"
+            redirectPort="8443" />
+
+        <Engine name="Catalina" defaultHost="localhost">
+            <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true" />
+        </Engine>
+    </Service>
+</Server>
